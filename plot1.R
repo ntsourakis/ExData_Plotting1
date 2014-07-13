@@ -18,7 +18,10 @@ plot1 <- function( )
 
 	# Get data of interest from 2007-02-01 to 2007-02-02
 	sub = subset(data, data$Date %in% as.Date(c("2007-02-01","2007-02-02")))
-
+	
+	# Use white background
+	par(bg = "white")
+	
 	# Create the histogram
 	hist(sub[,3], main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "Red")
 
